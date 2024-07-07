@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding : 10px;
+        }
+    </style>
+</head>
+<body>
+    <select id="selectLanguages" onchange="changeLang()">
+        <option value="select">選択してください</option>
+        <option value="jpn">日本語</option>
+        <option value="en">English</option>
+        <option value="all">全て表示</option>
+    </select>
+    <table>
+        <tr>
+            <th>日本</th>
+            <td>こんにちは</td>
+            <td>ありがとう</td>
+            <td>さようなら</td>
+        </tr>
+        <tr>
+            <th>English</th>
+            <td>Hello</td>
+            <td>Thank you</td>
+            <td>Good Bye</td>
+        </tr>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
