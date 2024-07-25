@@ -31,7 +31,7 @@ function registerUser() {
 
 // 登録されたユーザー情報を1件ずつコンソール出力する関数を作成してください。
 function findUser() {
-    for (let user of users) {
-        console.log(`名前: ${user.name}, メールアドレス: ${user.mail}`);
+    for (let i=0; i<users.length; i++) {
+        console.log(users[i]);
     }
 }
