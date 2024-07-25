@@ -13,24 +13,16 @@ let users=[];
 function registerUser() {
     // nameフィールドの値を取得してください
     // emailフィールドの値を取得してください。
-    let nameField = document.getElementById("name");
-    let mailField = document.getElementById("mail");
+    let nameField = document.getElementById("name").value;
+    let mailField = document.getElementById("mail").value;
     
+    let newUser=new User(name,mail);
     // 登録されているユーザーを取得してください。
     let name = nameField.value;
     let mail= mailField.value;
-    メールアドレスの重複を確認してください。
-    for(let user of users){
-        if(user.mail === mail){
-            console.log(`メールアドレス ${mail} は既に登録されています。`);
-            return;
-        }
-    }
+    // メールアドレスの重複を確認してください。
     // 既に登録済みの場合、登録しようとしたメールアドレスをを含む重複している旨のメッセージを出力してください。
     // 未登録の場合はユーザー情報を配列に追加してください。    
-    let newUser = new User(name, mail);
-    users.push(newUser);
-    console.log(`ユーザー ${name} が登録されました。`);
     // 登録後にnameフィールドの値を削除してください
     nameField.value = "";
     // 登録後にemailフィールドの値を削除してください
