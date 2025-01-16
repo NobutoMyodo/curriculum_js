@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新しいブログ記事の作成</title>
+</head>
+<body>
+    <h1>新しいブログ記事を作成</h1>
+
+    <form action="/blogs" method="post">
+
+        <div>
+            <label for="title">タイトル:</label>
+            <input type="text" id="title" name="title" value="" required>
+        </div>
+
+        <div>
+            <label for="content">内容:</label>
+            <textarea id="content" name="content" rows="4" cols="50" required></textarea>
+        </div>
+
+        <div>
+            <button type="submit">ブログを作成</button>
+        </div>
+    </form>
+
+    <div th:if="${#fields.hasErrors('title')}">
+        <p th:errors="*{title}">タイトルのエラー</p>
+    </div>
+    <div th:if="${#fields.hasErrors('content')}">
+        <p th:errors="*{content}">内容のエラー</p>
+    </div>
+
+    <div>
+        <a href="/blogs">ブログ一覧に戻る</a>
+    </div>
+</body>
+</html>
